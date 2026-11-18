@@ -98,7 +98,7 @@ merges, Conventional Commits in English. `deploy.yml` runs on every push to `mai
 - **Template metadata in `package.json`:** `author` and `repository` still point at the GoIT Academy template.
 - **No hooks, tests or Prettier/ESLint scripts:** a course exercise; `.prettierrc` is the template's.
 - **README images** are made by `tools/readme-images` (profile `IceCream`) from the live site; the logo is the site's
-  own and the footer carries no company branding, because this is a course project, not a company one.
+  own.
 - **npm, not pnpm:** the Parcel template ships a `package-lock.json`.
 - **Workflow actions on old versions** (`checkout@v2.3.1`, `github-pages-deploy-action@4.1.0`), as in the template.
 - **Documentation:** the template's Polish `README.pl` (generic Parcel instructions) was removed; the Parcel
@@ -115,4 +115,8 @@ to `.scratch/`.
 
 ---
 
-Author: [Damian Tchorzewski](https://github.com/DamTchorzewski)
+<p align="center"><a href="https://damreboot.pl"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/damreboot/company-dark.svg"><img src="docs/images/damreboot/company-light.svg" alt="damreboot.pl: company website" height="36"></picture></a><a href="https://www.linkedin.com/in/damian-tchorzewski-3b2388275/"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/damreboot/linkedin-dark.svg"><img src="docs/images/damreboot/linkedin-light.svg" alt="LinkedIn: let's connect" height="36"></picture></a><a href="mailto:damianchabracki@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/damreboot/email-dark.svg"><img src="docs/images/damreboot/email-light.svg" alt="E-mail: write to me" height="36"></picture></a></p>
+
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/damreboot/engineered-dark.svg"><img src="docs/images/damreboot/engineered-light.svg" alt="" height="33" align="middle"></picture> Engineered by <b>Damian Chabracki</b> (DamReboot IT)
+</p>
