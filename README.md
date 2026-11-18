@@ -1,67 +1,103 @@
+<p align="center">
+  <img src="docs/images/home.jpg" alt="IceCream Delights landing page" width="100%">
+</p>
 
-# IceCream Delights
+## About
 
-Welcome to the IceCream Delights project repository. Below, you'll find a comprehensive description of the project elements and the acceptance criteria.
+**Live site:** [damtchorzewski.github.io/IceCream](https://damtchorzewski.github.io/IceCream/)
 
-## Header Section (header.html)
+**IceCream Delights** is a responsive, mobile-first landing page for an ice-cream brand: a hero with a "Buy now"
+call to action, the product range, the brand story, advantages, a photo gallery, customer reviews in a slider, and
+the shops with their opening hours. It is a front-end exercise built from the GoIT Academy Parcel template.
 
-- HTML Structure: Utilizes semantic HTML5 for clarity. The viewport meta tag is included for proper scaling on various devices.
-- Styling: Follows the BEM methodology for organized styles. SASS preprocessor is employed for better style management.
-- Responsiveness: Adopts a Mobile-First approach, adjusting styles for breakpoints at 480px, 768px, and 1200px.
-- Mobile Menu: The mobile menu functionality is implemented in the mobile-menu.js file. Ensures correct HTML markup for the mobile menu.
+- **Semantic HTML5 in partials.** The page is assembled from nine partials (`header`, `mobile-menu`, `products`,
+  `about`, `advantages`, `gallery`, `reviews`, `contacts`, `footer`) with `posthtml-include`.
+- **BEM and SASS.** Styles follow the BEM methodology and are written in SASS (18 files under `src/sass/`).
+- **Mobile-first.** The layout is adjusted at 480 px, 768 px and 1200 px; images use `srcset` with `@1x` and `@2x`
+  files.
+- **Mobile menu.** A burger menu with a close button, the navigation and a "Buy now" button
+  (`src/js/mobile-menu.js`).
+- **Modals.** Product cards open "Learn more" windows and the contacts section opens the shop and franchise windows
+  (`src/js/modal.js`).
+- **Reviews slider.** Customer reviews run in a looped Swiper 8 slider with pagination, loaded from a CDN.
+- **Deployed by Actions.** Every push to `main` builds the site and publishes it to the `gh-pages` branch.
 
-## Contacts Section (contacts.html)
+> **Status:** a finished course project; the content (shops, reviews, prices) is sample content.
 
-- HTML Structure: Utilizes semantic HTML5. Includes information about different locations, opening hours, and buttons to open modals with maps and franchise information.
-- Responsiveness: Ensures responsiveness for various devices.
+## Tech stack
 
-## Footer Sections (footer.html)
+|          |                                                                                                           |
+| -------- | --------------------------------------------------------------------------------------------------------- |
+| Stack    | HTML5, SASS, vanilla JavaScript; [Parcel 2](https://parceljs.org/) with `posthtml-include`, `modern-normalize` |
+| UI       | BEM, mobile-first, Swiper 8 (CDN) for the reviews slider                                                  |
+| Tests    | none                                                                                                      |
+| Hosting  | GitHub Pages (`gh-pages` branch) through GitHub Actions                                                   |
 
-- HTML Structure: Divided into upper and lower sections. The upper part contains information about ice cream and social media links. The lower part includes copyright information.
-- Styling: Uses BEM methodology for styles.
-- Contact Information: Provides a contact number.
-
-## Gallery Section (gallery.html)
-
-- HTML Structure: Incorporates a gallery with a responsive image using the srcset attribute.
-- Responsiveness: Ensures the gallery is responsive to different screen sizes.
-
-## Hero Header Section (hero-header.html)
-
-- HTML Structure: Contains the main header with logo, navigation, "Buy now" buttons, and graphical elements.
-- Styling: Applies the BEM methodology for styles.
-- Graphics: Includes graphical elements related to the ice cream theme.
-
-## Mobile Menu (mobile-menu.html)
-
-- HTML Structure: Implements a mobile menu with a close button, navigation links, and a "Buy now" button.
-- Responsiveness: Ensures proper display on mobile devices.
-
-## Products Section (products.html)
-
-- HTML Structure: Presents different ice cream products with short descriptions and "Learn more" buttons opening modals.
-- Responsiveness: Ensures that the section is responsive to different screen sizes.
-
-## Reviews Section (reviews.html)
-
-- HTML Structure: Displays customer reviews using the Swiper.js library for a slider.
-- Styling: Utilizes the Swiper.js library for slider functionality.
-- Scripting: Includes a script for Swiper.js functionality.
-
-## Swiper Script (swiper-script.html)
-
-- Scripting: Utilizes the Swiper.js library for slider functionality. The script is included from a CDN.
-- Initialization: Initializes Swiper with looped pagination.
-
-## Acceptance Criteria:
-The IceCream Delights project meets the acceptance criteria, including the use of semantic HTML5, BEM methodology, SASS preprocessing, responsive design, and the implementation of mobile menus. The project incorporates graphical elements related to the ice cream theme, and the use of Swiper.js for a responsive customer reviews slider.
-
-If you have any questions or need additional information, please contact me.
-
-
+The content is in English; commits and branches are in English.
 
 ## Screenshots
 
-<img width="100%" src="https://github.com/damtchorzewski/icecream/blob/main/assets/Home.jpg">
+<p align="center">
+  <img src="docs/images/home.jpg" alt="IceCream Delights home page on desktop" width="100%">
+</p>
 
-Author: Damian Tchorzewski
+## Quick start
+
+```bash
+git clone https://github.com/DamTchorzewski/IceCream.git
+cd IceCream
+npm install
+npm start      # http://localhost:1234
+```
+
+Requirements: Node.js LTS and npm. Parcel reloads the page when a file changes.
+
+## Scripts
+
+| Command         | What it does                                                                       |
+| --------------- | ---------------------------------------------------------------------------------- |
+| `npm start`     | development server with live reload (`parcel src/*.html`)                          |
+| `npm run build` | production build to `dist/` with the public URL `/IceCream/` (what the workflow runs) |
+
+## Configuration
+
+None: no environment variables or keys. The public URL of the build is the `--public-url /IceCream/` argument of
+the `build` script and the `homepage` field in `package.json`; change both when the repository is renamed.
+
+## Structure
+
+```
+src/index.html        ★ the page: includes the partials below
+src/partials/         header, mobile-menu, products, about, advantages, gallery, reviews, contacts, footer
+src/sass/             BEM blocks in SASS, compiled by Parcel
+src/js/               modal.js (the modals), mobile-menu.js (open and close of the mobile menu)
+src/index.js          empty entry module referenced by the page; the Swiper setup is inline in the reviews partial
+src/images/           images with @1x / @2x variants and the favicon set
+assets/               images of the Parcel template (not used by the page)
+docs/                 documentation and the screenshot used above
+.github/workflows/    deploy.yml: build and publish to gh-pages
+```
+
+## Branches and workflows
+
+Shared standards from `reops/standards`: `main` ≤ `develop` ≤ a working branch `<type>/<topic>`, fast-forward
+merges, Conventional Commits in English. `deploy.yml` runs on every push to `main`.
+
+**Departures from the standards (and why):**
+
+- **Template metadata in `package.json`:** `author` and `repository` still point at the GoIT Academy template.
+- **No banner, hooks, tests or Prettier/ESLint scripts:** a course exercise; `.prettierrc` is the template's.
+- **npm, not pnpm:** the Parcel template ships a `package-lock.json`.
+- **Workflow actions on old versions** (`checkout@v2.3.1`, `github-pages-deploy-action@4.1.0`), as in the template.
+- **Documentation:** the template's Polish `README.pl` (generic Parcel instructions) was removed; the Parcel
+  documentation covers what it said.
+
+## Documentation
+
+| Document                                   | Covers                          |
+| ------------------------------------------ | ------------------------------- |
+| [docs/repository.md](docs/repository.md)   | GitHub description and topics   |
+
+---
+
+Author: [Damian Tchorzewski](https://github.com/DamTchorzewski)
