@@ -1,10 +1,17 @@
 <p align="center">
-  <img src="docs/images/home.jpg" alt="IceCream Delights landing page" width="100%">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/images/banner-dark.png">
+    <img src="docs/images/banner-light.png" alt="IceCream Delights: landing page of an ice-cream brand" width="100%">
+  </picture>
+</p>
+
+<p align="center">
+  <img src="docs/images/showcase.jpg" alt="IceCream Delights on desktop and on a phone" width="100%">
 </p>
 
 ## About
 
-**Live site:** [damtchorzewski.github.io/IceCream](https://damtchorzewski.github.io/IceCream/)
+<a href="https://damtchorzewski.github.io/IceCream/"><img src="docs/images/open-site.png" alt="Open the live site" width="130"></a>
 
 **IceCream Delights** is a responsive, mobile-first landing page for an ice-cream brand: a hero with a "Buy now"
 call to action, the product range, the brand story, advantages, a photo gallery, customer reviews in a slider, and
@@ -38,7 +45,10 @@ The content is in English; commits and branches are in English.
 ## Screenshots
 
 <p align="center">
-  <img src="docs/images/home.jpg" alt="IceCream Delights home page on desktop" width="100%">
+  <img src="docs/images/pages.jpg" alt="Products and gallery sections on desktop" width="100%">
+</p>
+<p align="center">
+  <img src="docs/images/mobile.jpg" alt="Mobile: hero, products, about and contacts" width="100%">
 </p>
 
 ## Quick start
@@ -74,7 +84,7 @@ src/js/               modal.js (the modals), mobile-menu.js (open and close of t
 src/index.js          empty entry module referenced by the page; the Swiper setup is inline in the reviews partial
 src/images/           images with @1x / @2x variants and the favicon set
 assets/               images of the Parcel template (not used by the page)
-docs/                 documentation and the screenshot used above
+docs/                 documentation; docs/images/ holds the README images (generated, see below)
 .github/workflows/    deploy.yml: build and publish to gh-pages
 ```
 
@@ -86,7 +96,9 @@ merges, Conventional Commits in English. `deploy.yml` runs on every push to `mai
 **Departures from the standards (and why):**
 
 - **Template metadata in `package.json`:** `author` and `repository` still point at the GoIT Academy template.
-- **No banner, hooks, tests or Prettier/ESLint scripts:** a course exercise; `.prettierrc` is the template's.
+- **No hooks, tests or Prettier/ESLint scripts:** a course exercise; `.prettierrc` is the template's.
+- **README images** are made by `tools/readme-images` (profile `IceCream`) from the live site; the logo is the site's
+  own and the footer carries no company branding, because this is a course project, not a company one.
 - **npm, not pnpm:** the Parcel template ships a `package-lock.json`.
 - **Workflow actions on old versions** (`checkout@v2.3.1`, `github-pages-deploy-action@4.1.0`), as in the template.
 - **Documentation:** the template's Polish `README.pl` (generic Parcel instructions) was removed; the Parcel
@@ -97,6 +109,9 @@ merges, Conventional Commits in English. `deploy.yml` runs on every push to `mai
 | Document                                   | Covers                          |
 | ------------------------------------------ | ------------------------------- |
 | [docs/repository.md](docs/repository.md)   | GitHub description and topics   |
+
+The README images (`docs/images/`) are regenerated with `tools/readme-images`, profile `IceCream`; the working shots go
+to `.scratch/`.
 
 ---
 
