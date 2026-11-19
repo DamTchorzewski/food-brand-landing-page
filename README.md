@@ -93,7 +93,7 @@ docs/                 documentation; docs/images/ holds the README images (gener
 
 Shared standards from `reops/standards`: `main` ≤ `develop` ≤ a working branch `<type>/<topic>`, fast-forward
 merges, Conventional Commits in English. `deploy.yml` builds every push to `main` and `develop` (not documentation-only ones) and publishes from `main` only;
-the pause switch is the repository variable `WORKFLOWS_ENABLED`. Details: `reops/standards/workflows.md`, level 1.
+there is no pause switch in the code (disable the workflow in GitHub to pause). Details: `reops/standards/workflows.md`, level 1.
 
 **Departures from the standards (and why):**
 
