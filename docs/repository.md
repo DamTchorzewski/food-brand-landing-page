@@ -8,7 +8,7 @@ Standard nazw repozytoriów: `reops/standards/repo-names.md`. Kolejność:
 
 1. GitHub: Settings → General → Repository name → `ice-cream`. Adres repozytorium GitHub przekieruje, ale **adres strony (GitHub Pages) zmieni się** z `.../IceCream/` na `.../ice-cream/`, a stary przestanie działać.
 2. Lokalnie: folder `ice-cream` i `git remote set-url origin https://github.com/DamTchorzewski/ice-cream.git`.
-3. Wypchnij `main`: workflow `deploy.yml` zbuduje stronę z `--public-url /ice-cream/` (to już jest w `package.json`) i opublikuje ją w `gh-pages`. Settings → Pages powinno wskazywać `gh-pages` / root.
+3. Wypchnij `main`: workflow `deploy.yml` zbuduje stronę z `--public-url /ice-cream/` (to już jest w `package.json`) i opublikuje ją oficjalnymi akcjami Pages. Settings → Pages → Source ustaw na **GitHub Actions** (gałąź `gh-pages` nie jest już potrzebna; usuń ją, gdy strona działa).
 4. Linki do strony w innych repozytoriach (`WebCraftStudio`: `project-6.html`) wskazują już nowy adres.
 
 ## Opis i tagi (About)
@@ -43,6 +43,6 @@ gh repo edit DamTchorzewski/ice-cream --homepage "https://damtchorzewski.github.
 
 | Gdzie (GitHub)                                          | Co ustawić                                                              |
 | ------------------------------------------------------- | ----------------------------------------------------------------------- |
-| Settings → Pages                                        | źródło: gałąź `gh-pages`, folder `/ (root)` (publikuje ją `deploy.yml`) |
+| Settings → Pages                                        | Source: **GitHub Actions** (publikuje `deploy.yml`) |
 | Settings → General → Default branch                     | `main` (już jest)                                                       |
 | Settings → Branches (albo Rulesets) → `main`, `develop` | zablokuj force push i usuwanie gałęzi                                   |
