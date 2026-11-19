@@ -9,12 +9,8 @@
 # The site is published with GitHub's own Pages actions (no gh-pages branch). One-time setting by the owner:
 # Settings → Pages → Build and deployment → Source = "GitHub Actions". The build uses the public URL /ice-cream/
 # (the `build` script), which is the address https://damtchorzewski.github.io/ice-cream/.
-# Secrets and variables: none needed (only the pause switch below).
+# Secrets and variables: none needed. To pause: Actions → this workflow → ⋯ → Disable workflow.
 # Standard: reops/standards/workflows.md (global, outside this repo)
-#
-# Pause switch: automatic runs (push) happen only when the repository variable WORKFLOWS_ENABLED is "true"
-# (Settings → Secrets and variables → Actions → Variables); a manual run (Actions → Run workflow) always works.
-# Unset = paused.
 
 name: Build & Deploy
 
@@ -39,7 +35,6 @@ permissions:
 jobs:
   build:
     name: Build
-    if: vars.WORKFLOWS_ENABLED == 'true' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
