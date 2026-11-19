@@ -27,7 +27,8 @@ the shops with their opening hours. It is a front-end exercise built from the Go
 - **Modals.** Product cards open "Learn more" windows and the contacts section opens the shop and franchise windows
   (`src/js/modal.js`).
 - **Reviews slider.** Customer reviews run in a looped Swiper 8 slider with pagination, loaded from a CDN.
-- **Deployed by Actions.** Every push to `main` builds the site and publishes it to the `gh-pages` branch.
+- **Deployed by Actions.** A push to `main` builds the site and publishes it with GitHub's Pages actions; a push to
+  `develop` only checks that it builds.
 
 > **Status:** a finished course project; the content (shops, reviews, prices) is sample content.
 
@@ -38,7 +39,7 @@ the shops with their opening hours. It is a front-end exercise built from the Go
 | Stack    | HTML5, SASS, vanilla JavaScript; [Parcel 2](https://parceljs.org/) with `posthtml-include`, `modern-normalize` |
 | UI       | BEM, mobile-first, Swiper 8 (CDN) for the reviews slider                                                  |
 | Tests    | none                                                                                                      |
-| Hosting  | GitHub Pages (`gh-pages` branch) through GitHub Actions                                                   |
+| Hosting  | GitHub Pages, published by GitHub Actions (Settings → Pages → Source: GitHub Actions)                     |
 
 The content is in English; commits and branches are in English.
 
@@ -85,13 +86,14 @@ src/index.js          empty entry module referenced by the page; the Swiper setu
 src/images/           images with @1x / @2x variants and the favicon set
 assets/               images of the Parcel template (not used by the page)
 docs/                 documentation; docs/images/ holds the README images (generated, see below)
-.github/workflows/    deploy.yml: build and publish to gh-pages
+.github/workflows/    deploy.yml: build, and publish to GitHub Pages from main
 ```
 
 ## Branches and workflows
 
 Shared standards from `reops/standards`: `main` ≤ `develop` ≤ a working branch `<type>/<topic>`, fast-forward
-merges, Conventional Commits in English. `deploy.yml` runs on every push to `main`.
+merges, Conventional Commits in English. `deploy.yml` builds every push to `main` and `develop` (not documentation-only ones) and publishes from `main` only;
+the pause switch is the repository variable `WORKFLOWS_ENABLED`. Details: `reops/standards/workflows.md`, level 1.
 
 **Departures from the standards (and why):**
 
@@ -99,7 +101,6 @@ merges, Conventional Commits in English. `deploy.yml` runs on every push to `mai
 - **README images** are made by `tools/readme-images` (profile `ice-cream`) from the live site; the logo is the site's
   own.
 - **npm, not pnpm:** the Parcel template ships a `package-lock.json`.
-- **Workflow actions on old versions** (`checkout@v2.3.1`, `github-pages-deploy-action@4.1.0`), as in the template.
 - **Documentation:** the template's Polish `README.pl` (generic Parcel instructions) was removed; the Parcel
   documentation covers what it said.
 
