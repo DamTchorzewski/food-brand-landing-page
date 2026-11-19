@@ -2,20 +2,20 @@
   "name": "ice-cream",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://damtchorzewski.github.io/IceCream/",
+  "homepage": "https://damtchorzewski.github.io/ice-cream/",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /IceCream/"
+    "build": "parcel build src/*.html --public-url /ice-cream/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+    "url": "git+https://github.com/DamTchorzewski/ice-cream.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Damian Tchorzewski",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/goitacademy/parcel-project-template/issues"
+    "url": "https://github.com/DamTchorzewski/ice-cream/issues"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0"
