@@ -7,8 +7,8 @@
 # A change to the documentation alone (md files, docs/) starts nothing. Nothing is built on a schedule.
 #
 # The site is published with GitHub's own Pages actions (no gh-pages branch). One-time setting by the owner:
-# Settings → Pages → Build and deployment → Source = "GitHub Actions". The build uses the public URL /ice-cream/
-# (the `build` script), which is the address https://damtchorzewski.github.io/ice-cream/.
+# Settings → Pages → Build and deployment → Source = "GitHub Actions". The build uses the public URL /food-brand-landing-page/
+# (the `build` script), which is the address https://damtchorzewski.github.io/food-brand-landing-page/.
 # Secrets and variables: none needed. To pause: Actions → this workflow → ⋯ → Disable workflow.
 # Standard: reops/standards/workflows.md (global, outside this repo)
 

@@ -11,7 +11,7 @@
 
 ## About
 
-<a href="https://damtchorzewski.github.io/ice-cream/"><img src="docs/images/open-site.png" alt="Open the live site" width="130"></a>
+<a href="https://damtchorzewski.github.io/food-brand-landing-page/"><img src="docs/images/open-site.png" alt="Open the live site" width="130"></a>
 
 **IceCream Delights** is a responsive, mobile-first landing page for an ice-cream brand: a hero with a "Buy now"
 call to action, the product range, the brand story, advantages, a photo gallery, customer reviews in a slider, and
@@ -55,8 +55,8 @@ The content is in English; commits and branches are in English.
 ## Quick start
 
 ```bash
-git clone https://github.com/DamTchorzewski/ice-cream.git
-cd ice-cream
+git clone https://github.com/DamTchorzewski/food-brand-landing-page.git
+cd food-brand-landing-page
 npm install
 npm start      # http://localhost:1234
 ```
@@ -68,11 +68,11 @@ Requirements: Node.js LTS and npm. Parcel reloads the page when a file changes.
 | Command         | What it does                                                                       |
 | --------------- | ---------------------------------------------------------------------------------- |
 | `npm start`     | development server with live reload (`parcel src/*.html`)                          |
-| `npm run build` | production build to `dist/` with the public URL `/ice-cream/` (what the workflow runs) |
+| `npm run build` | production build to `dist/` with the public URL `/food-brand-landing-page/` (what the workflow runs) |
 
 ## Configuration
 
-None: no environment variables or keys. The public URL of the build is the `--public-url /ice-cream/` argument of
+None: no environment variables or keys. The public URL of the build is the `--public-url /food-brand-landing-page/` argument of
 the `build` script and the `homepage` field in `package.json`; change both when the repository is renamed.
 
 ## Structure
@@ -98,7 +98,7 @@ there is no pause switch in the code (disable the workflow in GitHub to pause). 
 **Departures from the standards (and why):**
 
 - **No hooks, tests or Prettier/ESLint scripts:** a course exercise; `.prettierrc` is the template's.
-- **README images** are made by `tools/readme-images` (profile `ice-cream`) from the live site; the logo is the site's
+- **README images** are made by `tools/readme-images` (profile `food-brand-landing-page`) from the live site; the logo is the site's
   own.
 - **npm, not pnpm:** the Parcel template ships a `package-lock.json`.
 - **Documentation:** the template's Polish `README.pl` (generic Parcel instructions) was removed; the Parcel
@@ -110,7 +110,7 @@ there is no pause switch in the code (disable the workflow in GitHub to pause). 
 | ------------------------------------------ | ------------------------------- |
 | [docs/repository.md](docs/repository.md)   | GitHub description and topics   |
 
-The README images (`docs/images/`) are regenerated with `tools/readme-images`, profile `ice-cream`; the working shots go
+The README images (`docs/images/`) are regenerated with `tools/readme-images`, profile `food-brand-landing-page`; the working shots go
 to `.scratch/`.
 
 ---

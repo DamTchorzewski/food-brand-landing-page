@@ -2,14 +2,9 @@
 
 Rzeczy, które ustawia się na GitHubie ręcznie (nie da się ich zapisać w plikach repozytorium). Przegląd projektu: [README](../README.md).
 
-## Zmiana nazwy na `ice-cream`
+## Nazwa repozytorium: `food-brand-landing-page`
 
-Standard nazw repozytoriów: `reops/standards/repo-names.md`. Kolejność:
-
-1. GitHub: Settings → General → Repository name → `ice-cream`. Adres repozytorium GitHub przekieruje, ale **adres strony (GitHub Pages) zmieni się** z `.../IceCream/` na `.../ice-cream/`, a stary przestanie działać.
-2. Lokalnie: folder `ice-cream` i `git remote set-url origin https://github.com/DamTchorzewski/ice-cream.git`.
-3. Wypchnij `main`: workflow `deploy.yml` zbuduje stronę z `--public-url /ice-cream/` (to już jest w `package.json`) i opublikuje ją oficjalnymi akcjami Pages. Settings → Pages → Source ustaw na **GitHub Actions** (gałąź `gh-pages` nie jest już potrzebna; usuń ją, gdy strona działa).
-4. Linki do strony w innych repozytoriach (`WebCraftStudio`: `project-6.html`) wskazują już nowy adres.
+Standard nazw repozytoriów: `reops/standards/repo-names.md`. Repozytorium nazywało się wcześniej `IceCream`, potem `ice-cream`; od 2026-11-20 nazywa się `food-brand-landing-page` (nazwa mówi, czym jest projekt: fraza szukana na GitHubie). GitHub przekierowuje stary adres repozytorium, ale **adres strony (GitHub Pages) zmienił się** na `https://damtchorzewski.github.io/food-brand-landing-page/`, a stary przestał działać. Workflow `deploy.yml` buduje stronę z `--public-url /food-brand-landing-page/` (to jest w `package.json`) i publikuje ją oficjalnymi akcjami Pages; Settings → Pages → Source jest ustawione na **GitHub Actions**. Linki do strony w innych repozytoriach (`WebCraftStudio`: `project-6.html`) trzeba poprawić na nowy adres.
 
 ## Opis i tagi (About)
 
@@ -18,31 +13,31 @@ GitHub: strona repozytorium → ⚙ obok „About” → pola poniżej. Opis ma 
 **Opis (Description):**
 
 ```text
-Landing page of an ice-cream brand: product range with detail windows, brand story, gallery, a customer-reviews slider, shops with opening hours and a mobile menu. Mobile-first and fast (static, Parcel), deployed to GitHub Pages on every push, so the brand is easy to find and read on any device.
+Mobile-first static landing page in HTML, SASS and BEM, built with Parcel.
 ```
 
 **Strona (Website):**
 
 ```text
-https://damtchorzewski.github.io/ice-cream/
+https://damtchorzewski.github.io/food-brand-landing-page/
 ```
 
 **Tagi (Topics):**
 
 ```text
-landing-page html5 sass scss bem parcel swiper responsive-design mobile-first github-pages github-actions javascript front-end
+landing-page html5 sass bem parcel swiper responsive-design mobile-first github-pages github-actions javascript front-end
 ```
 
 Z GitHub CLI (`gh`) to samo jedną komendą:
 
 ```bash
-gh repo edit DamTchorzewski/ice-cream --homepage "https://damtchorzewski.github.io/ice-cream/" --description "Landing page of an ice-cream brand: product range with detail windows, brand story, gallery, a customer-reviews slider, shops with opening hours and a mobile menu. Mobile-first and fast (static, Parcel), deployed to GitHub Pages on every push, so the brand is easy to find and read on any device." --add-topic landing-page,html5,sass,scss,bem,parcel,swiper,responsive-design,mobile-first,github-pages,github-actions,javascript,front-end
+gh repo edit DamTchorzewski/food-brand-landing-page --homepage "https://damtchorzewski.github.io/food-brand-landing-page/" --description "Mobile-first static landing page in HTML, SASS and BEM, built with Parcel." --add-topic landing-page --add-topic html5 --add-topic sass --add-topic bem --add-topic parcel --add-topic swiper --add-topic responsive-design --add-topic mobile-first --add-topic github-pages --add-topic github-actions --add-topic javascript --add-topic front-end
 ```
 
 ## Ustawienia do włączenia
 
-| Gdzie (GitHub)                                          | Co ustawić                                                              |
-| ------------------------------------------------------- | ----------------------------------------------------------------------- |
+| Gdzie (GitHub)                                          | Co ustawić                                          |
+| ------------------------------------------------------- | --------------------------------------------------- |
 | Settings → Pages                                        | Source: **GitHub Actions** (publikuje `deploy.yml`) |
-| Settings → General → Default branch                     | `main` (już jest)                                                       |
-| Settings → Branches (albo Rulesets) → `main`, `develop` | zablokuj force push i usuwanie gałęzi                                   |
+| Settings → General → Default branch                     | `main` (już jest)                                   |
+| Settings → Branches (albo Rulesets) → `main`, `develop` | zablokuj force push i usuwanie gałęzi               |
