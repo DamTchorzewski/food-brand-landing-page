@@ -4,7 +4,7 @@ Rzeczy, które ustawia się na GitHubie ręcznie (nie da się ich zapisać w pli
 
 ## Nazwa repozytorium: `food-brand-landing-page`
 
-Standard nazw repozytoriów: `reops/standards/repo-names.md`. Repozytorium nazywało się wcześniej `IceCream`, potem `ice-cream`; od 2026-11-20 nazywa się `food-brand-landing-page` (nazwa mówi, czym jest projekt: fraza szukana na GitHubie). GitHub przekierowuje stary adres repozytorium, ale **adres strony (GitHub Pages) zmienił się** na `https://damtchorzewski.github.io/food-brand-landing-page/`, a stary przestał działać. Workflow `deploy.yml` buduje stronę z `--public-url /food-brand-landing-page/` (to jest w `package.json`) i publikuje ją oficjalnymi akcjami Pages; Settings → Pages → Source jest ustawione na **GitHub Actions**. Linki do strony w innych repozytoriach (`WebCraftStudio`: `project-6.html`) trzeba poprawić na nowy adres.
+Standard nazw repozytoriów: `reops/standards/repo-names.md`. Repozytorium nazywało się wcześniej `IceCream`, potem `ice-cream`; od 2026-11-20 nazywa się `food-brand-landing-page` (nazwa mówi, czym jest projekt: fraza szukana na GitHubie). GitHub przekierowuje stary adres repozytorium, ale **adres strony (GitHub Pages) zmienił się** na `https://damtchorzewski.github.io/food-brand-landing-page/`, a stary przestał działać. Workflow `deploy.yml` buduje stronę z `--public-url /food-brand-landing-page/` (to jest w `package.json`) i publikuje ją oficjalnymi akcjami Pages; Settings → Pages → Source jest ustawione na **GitHub Actions**. Stary link do strony w `WebCraftStudio` (`project-6.html`) zniknął razem z tą stroną: repozytorium jest teraz szablonem `portfolio-website-template` bez prawdziwych projektów, więc nie ma już czego poprawiać.
 
 ## Opis i tagi (About)
 
