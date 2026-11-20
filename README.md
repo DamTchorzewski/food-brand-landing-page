@@ -15,7 +15,7 @@
 
 **IceCream Delights** is a responsive, mobile-first landing page for an ice-cream brand: a hero with a "Buy now"
 call to action, the product range, the brand story, advantages, a photo gallery, customer reviews in a slider, and
-the shops with their opening hours. It is a front-end exercise built from the GoIT Academy Parcel template.
+the shops with their opening hours.
 
 - **Semantic HTML5 in partials.** The page is assembled from nine partials (`header`, `mobile-menu`, `products`,
   `about`, `advantages`, `gallery`, `reviews`, `contacts`, `footer`) with `posthtml-include`.
@@ -30,7 +30,7 @@ the shops with their opening hours. It is a front-end exercise built from the Go
 - **Deployed by Actions.** A push to `main` builds the site and publishes it with GitHub's Pages actions; a push to
   `develop` only checks that it builds.
 
-> **Status:** a finished course project; the content (shops, reviews, prices) is sample content.
+> **Status:** the content (shops, reviews, prices) is sample content.
 
 ## Tech stack
 
@@ -97,7 +97,7 @@ there is no pause switch in the code (disable the workflow in GitHub to pause). 
 
 **Departures from the standards (and why):**
 
-- **No hooks, tests or Prettier/ESLint scripts:** a course exercise; `.prettierrc` is the template's.
+- **No hooks, tests or Prettier/ESLint scripts:** a small static site; `.prettierrc` is the starter template's.
 - **README images** are made by `tools/readme-images` (profile `food-brand-landing-page`) from the live site; the logo is the site's
   own.
 - **npm, not pnpm:** the Parcel template ships a `package-lock.json`.
